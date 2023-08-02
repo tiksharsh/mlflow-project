@@ -1,0 +1,9 @@
+artifacts/*
+src/mlproject/__pycache__/
+src/mlproject/constants/__pycache__/
+src/mlproject/entity/__pycache__/
+src/mlproject/pipeline/__pycache__/
+src/mlproject/utils/__pycache__/
+
+.DS_Store
+.vscode/
