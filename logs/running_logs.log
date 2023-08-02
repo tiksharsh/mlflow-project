@@ -1,0 +1,121 @@
+[2023-07-31 21:30:53,627: INFO: main: Welcome to our custom logging]
+[2023-07-31 23:28:41,169: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-07-31 23:28:41,176: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-07-31 23:28:41,182: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-07-31 23:28:41,184: INFO: common: created directory at: artifacts]
+[2023-07-31 23:28:41,185: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-07-31 23:28:42,338: INFO: 2366278714: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: B218:CC41B:3628B:471C8:64C7F651
+Accept-Ranges: bytes
+Date: Mon, 31 Jul 2023 17:58:42 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830037-CCU
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1690826322.427630,VS0,VE338
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 7101ab737b8a068b344679979b54b97351c29e67
+Expires: Mon, 31 Jul 2023 18:03:42 GMT
+Source-Age: 0
+
+]
+[2023-08-01 00:01:04,116: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-01 00:01:04,123: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-01 00:01:04,128: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-01 00:01:04,134: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-01 00:01:04,135: INFO: common: created directory at: artifacts]
+[2023-08-01 00:01:04,135: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-01 00:01:05,274: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: B218:CC41B:3628B:471C8:64C7F651
+Accept-Ranges: bytes
+Date: Mon, 31 Jul 2023 18:31:05 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830026-CCU
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1690828265.178011,VS0,VE336
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 201b1e01e43d5ec68bdbf9156006cedec33e83cf
+Expires: Mon, 31 Jul 2023 18:36:05 GMT
+Source-Age: 0
+
+]
+[2023-08-01 00:01:05,280: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-08-01 00:01:05,280: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-08-01 00:01:05,280: ERROR: main: name 'DataValidationTrainingPipeline' is not defined]
+Traceback (most recent call last):
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/main.py", line 25, in <module>
+    data_ingestion = DataValidationTrainingPipeline()
+NameError: name 'DataValidationTrainingPipeline' is not defined
+[2023-08-01 00:01:58,249: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-01 00:01:58,252: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-01 00:01:58,254: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-01 00:01:58,257: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-01 00:01:58,258: INFO: common: created directory at: artifacts]
+[2023-08-01 00:01:58,259: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-01 00:01:58,486: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: B218:CC41B:3628B:471C8:64C7F651
+Accept-Ranges: bytes
+Date: Mon, 31 Jul 2023 18:31:58 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ccu830044-CCU
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1690828319.816568,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 8f5ced6d15913e08d6c47990bc591c509ace0bba
+Expires: Mon, 31 Jul 2023 18:36:58 GMT
+Source-Age: 53
+
+]
+[2023-08-01 00:01:58,491: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-08-02 18:12:29,834: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-02 18:13:22,485: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-02 18:13:56,508: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-02 18:14:41,937: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-02 18:15:08,847: INFO: common: created directory at: artifacts]
+[2023-08-02 18:16:46,667: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-02 18:18:56,494: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2023-08-02 18:19:18,297: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
