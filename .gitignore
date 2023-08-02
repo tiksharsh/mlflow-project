@@ -4,6 +4,8 @@ src/mlproject/constants/__pycache__/
 src/mlproject/entity/__pycache__/
 src/mlproject/pipeline/__pycache__/
 src/mlproject/utils/__pycache__/
+src/mlproject/config/__pycache__/
+src/mlProject.egg-info/PKG-INFO
 
 .DS_Store
 .vscode/
