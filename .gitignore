@@ -6,6 +6,7 @@ src/mlproject/pipeline/__pycache__/
 src/mlproject/utils/__pycache__/
 src/mlproject/config/__pycache__/
 src/mlProject.egg-info/PKG-INFO
+src/mlproject/components/__pycache__/
 
 .DS_Store
 .vscode/
