@@ -1,3 +1,6 @@
+# https://www.youtube.com/watch?v=pxk1Fr33-L4
+
+
 from flask import Flask, render_template, request
 import os 
 import numpy as np

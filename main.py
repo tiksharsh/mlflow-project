@@ -1,3 +1,5 @@
+# https://www.youtube.com/watch?v=pxk1Fr33-L4
+
 from mlproject import logger
 from mlproject.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from mlproject.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
