@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/mlruns/0/dd29a5a2ede6447ba782e50cb44e28a0/artifacts
+end_time: 1691061530958
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dd29a5a2ede6447ba782e50cb44e28a0
+run_name: thundering-hawk-687
+run_uuid: dd29a5a2ede6447ba782e50cb44e28a0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691061526977
+status: 3
+tags: []
+user_id: gadeh

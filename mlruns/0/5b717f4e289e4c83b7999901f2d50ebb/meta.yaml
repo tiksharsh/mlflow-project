@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/mlruns/0/5b717f4e289e4c83b7999901f2d50ebb/artifacts
+end_time: 1691061670282
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5b717f4e289e4c83b7999901f2d50ebb
+run_name: abrasive-snipe-211
+run_uuid: 5b717f4e289e4c83b7999901f2d50ebb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691061667512
+status: 3
+tags: []
+user_id: gadeh
