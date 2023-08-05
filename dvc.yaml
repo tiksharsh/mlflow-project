@@ -54,10 +54,10 @@ stages:
     params:
       - ElasticNet.alpha
       - ElasticNet.l1_ratio
-    outs:
-      - artifacts/model_evaluation/metrics.json
-    # metrics:
-    # - artifacts/model_evaluation/metrics.json:
-    #     cache: false
+    # outs:
+    #   - artifacts/model_evaluation/metrics.json
+    metrics:
+    - artifacts/model_evaluation/metrics.json:
+        cache: true
 
   
