@@ -42,7 +42,7 @@ stages:
     outs:
       - artifacts/model_trainer/model.joblib
     metrics:
-      - artifacts/model_trainer/scores.json:
+      - reports/scores.json:
           cache: false
 
   model_evaluation:
