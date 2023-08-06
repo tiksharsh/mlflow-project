@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/mlruns/0/1f30d65f7fe84ac4acc2fe4635d06df3/artifacts
+end_time: 1691323155444
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1f30d65f7fe84ac4acc2fe4635d06df3
+run_name: abundant-dove-985
+run_uuid: 1f30d65f7fe84ac4acc2fe4635d06df3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691323152629
+status: 3
+tags: []
+user_id: gadeh

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/mlruns/0/5cb8b7db10b1415daaf9b43da56f3b2c/artifacts
+end_time: 1691323062435
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5cb8b7db10b1415daaf9b43da56f3b2c
+run_name: amusing-turtle-850
+run_uuid: 5cb8b7db10b1415daaf9b43da56f3b2c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1691323059499
+status: 3
+tags: []
+user_id: gadeh
