@@ -36,6 +36,7 @@ class ModelTrainerConfig:
     alpha: float
     l1_ratio: float
     target_column: str
+    score_file_name: str
 
 
 
@@ -49,3 +50,5 @@ class ModelEvaluationConfig:
     metric_file_name: Path
     target_column: str
     mlflow_uri: str
+    mlflow_username: str
+    mlflow_pwd: str

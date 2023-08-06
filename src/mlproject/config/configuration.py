@@ -81,7 +81,8 @@ class ConfigurationManager:
             model_name = config.model_name,
             alpha = params.alpha,
             l1_ratio = params.l1_ratio,
-            target_column = schema.name
+            target_column = schema.name,
+            score_file_name = config.score_file_name,
             
         )
 
@@ -104,6 +105,8 @@ class ConfigurationManager:
             metric_file_name = config.metric_file_name,
             target_column = schema.name,
             mlflow_uri="https://dagshub.com/tiksharsh/mlflow-project.mlflow",
+            mlflow_username="tiksharsh",
+            mlflow_pwd="0f27aa886d82f4cd2f16dc79464402ddf1de99b6",
            
         )
 

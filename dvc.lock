@@ -5,8 +5,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 12489820e8b968e9e422dc93ef37d36c
-      size: 983
+      md5: 270db8164f8157aa9e144c656463b055
+      size: 1038
     - path: src/mlproject/pipeline/stage_01_data_ingestion.py
       hash: md5
       md5: 679d1716ca2b7b9637a591dd87e48789
@@ -21,8 +21,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 12489820e8b968e9e422dc93ef37d36c
-      size: 983
+      md5: 270db8164f8157aa9e144c656463b055
+      size: 1038
     - path: schema.yaml
       hash: md5
       md5: 9bac03cc8d4add1cb01aae05ff959c6e
@@ -45,8 +45,8 @@ stages:
       size: 100951
     - path: config/config.yaml
       hash: md5
-      md5: 12489820e8b968e9e422dc93ef37d36c
-      size: 983
+      md5: 270db8164f8157aa9e144c656463b055
+      size: 1038
     - path: src/mlproject/pipeline/stage_03_data_transformation.py
       hash: md5
       md5: f3292a87c526b13b5b2c44485736072c
@@ -54,31 +54,31 @@ stages:
     outs:
     - path: artifacts/data_transformation/test.csv
       hash: md5
-      md5: 4673730d8830fa55773c5c230dbd85b6
-      size: 23481
+      md5: 33e34b552b7e057bbcb6b6b0cbaa1934
+      size: 23622
     - path: artifacts/data_transformation/train.csv
       hash: md5
-      md5: 766a1efc27fb4cb713d534bf737213b6
-      size: 70150
+      md5: 8146d076c437d8eada2d5015af8a22d3
+      size: 70009
   model_trainer:
     cmd: python src/mlproject/pipeline/stage_04_model_trainer.py
     deps:
     - path: artifacts/data_transformation/test.csv
       hash: md5
-      md5: 4673730d8830fa55773c5c230dbd85b6
-      size: 23481
+      md5: 33e34b552b7e057bbcb6b6b0cbaa1934
+      size: 23622
     - path: artifacts/data_transformation/train.csv
       hash: md5
-      md5: 766a1efc27fb4cb713d534bf737213b6
-      size: 70150
+      md5: 8146d076c437d8eada2d5015af8a22d3
+      size: 70009
     - path: config/config.yaml
       hash: md5
-      md5: 12489820e8b968e9e422dc93ef37d36c
-      size: 983
+      md5: 270db8164f8157aa9e144c656463b055
+      size: 1038
     - path: params.yaml
       hash: md5
-      md5: cb94505c6da0570cf9dc067cfae0dbb5
-      size: 41
+      md5: f1b9e4e5b62f8b019c2c7b92d0a3107f
+      size: 40
     - path: schema.yaml
       hash: md5
       md5: 9bac03cc8d4add1cb01aae05ff959c6e
@@ -89,31 +89,35 @@ stages:
       size: 854
     params:
       params.yaml:
-        ElasticNet.alpha: 0.35
-        ElasticNet.l1_ratio: 0.7
+        ElasticNet.alpha: 0.9
+        ElasticNet.l1_ratio: 0.1
     outs:
     - path: artifacts/model_trainer/model.joblib
       hash: md5
-      md5: b5aa0c351c628df419e97a20ac0e1f9c
+      md5: b1fcefd0b77d93185e5c75b78176927c
       size: 1263
+    - path: artifacts/model_trainer/scores.json
+      hash: md5
+      md5: 4170d783bbc0c2655961ff43523dc8e3
+      size: 78
   model_evaluation:
     cmd: python src/mlproject/pipeline/stage_05_model_evaluation.py
     deps:
     - path: artifacts/data_transformation/test.csv
       hash: md5
-      md5: 4673730d8830fa55773c5c230dbd85b6
-      size: 23481
+      md5: 33e34b552b7e057bbcb6b6b0cbaa1934
+      size: 23622
     - path: artifacts/model_trainer/model.joblib
       hash: md5
-      md5: a8c97e6b2192a5741570e49e13b367c7
+      md5: b1fcefd0b77d93185e5c75b78176927c
       size: 1263
     - path: config/config.yaml
       hash: md5
-      md5: 12489820e8b968e9e422dc93ef37d36c
-      size: 983
+      md5: 270db8164f8157aa9e144c656463b055
+      size: 1038
     - path: params.yaml
       hash: md5
-      md5: 2d13bb8ea9221bd17739d2b8abe439de
+      md5: f1b9e4e5b62f8b019c2c7b92d0a3107f
       size: 40
     - path: schema.yaml
       hash: md5
@@ -125,10 +129,10 @@ stages:
       size: 893
     params:
       params.yaml:
-        ElasticNet.alpha: 0.3
-        ElasticNet.l1_ratio: 0.7
+        ElasticNet.alpha: 0.9
+        ElasticNet.l1_ratio: 0.1
     outs:
     - path: artifacts/model_evaluation/metrics.json
       hash: md5
-      md5: a0454d9108cc4d989c6f34889758be34
-      size: 96
+      md5: 102ff553e63d08d50ef4fe6007d9226d
+      size: 173

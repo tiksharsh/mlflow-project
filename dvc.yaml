@@ -41,6 +41,9 @@ stages:
       - ElasticNet.l1_ratio
     outs:
       - artifacts/model_trainer/model.joblib
+    metrics:
+      - artifacts/model_trainer/scores.json:
+          cache: false
 
   model_evaluation:
     cmd: python src/mlproject/pipeline/stage_05_model_evaluation.py
@@ -57,7 +60,7 @@ stages:
     # outs:
     #   - artifacts/model_evaluation/metrics.json
     metrics:
-    - artifacts/model_evaluation/metrics.json:
-        cache: false
+      - artifacts/model_evaluation/metrics.json:
+          cache: false
 
   

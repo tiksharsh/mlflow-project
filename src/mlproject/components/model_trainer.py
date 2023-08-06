@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import json
 from mlproject import logger
 from sklearn.linear_model import ElasticNet
 import joblib
@@ -25,6 +26,16 @@ class ModelTrainer:
 
         lr = ElasticNet(alpha=self.config.alpha, l1_ratio=self.config.l1_ratio, random_state=42)
         lr.fit(train_x, train_y)
+        # Report training set score
+        train_score = lr.score(train_x, train_y) * 100
+        test_score = lr.score(test_x, test_y) * 100
+        with open(self.config.score_file_name, "w") as fd:
+            json.dump(
+                {
+                    "Train_score": train_score.tolist(),
+                    "Test_score": test_score.tolist()
+                   
+                }, fd, indent=4)
 
         joblib.dump(lr, os.path.join(self.config.root_dir, self.config.model_name))
 
