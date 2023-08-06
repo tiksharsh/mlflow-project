@@ -1235,3 +1235,377 @@ x==========x]
 [2023-08-06 17:29:15,447: INFO: stage_05_model_evaluation: >>>>>> stage Model evaluation stage completed <<<<<<
 
 x==========x]
+[2023-08-06 17:42:07,863: INFO: stage_04_model_trainer: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-08-06 17:42:07,867: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:42:07,867: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:42:07,869: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:42:07,870: INFO: common: created directory at: artifacts]
+[2023-08-06 17:42:07,870: INFO: common: created directory at: artifacts/model_trainer]
+[2023-08-06 17:42:07,882: INFO: stage_04_model_trainer: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:42:10,134: INFO: stage_05_model_evaluation: >>>>>> stage Model evaluation stage started <<<<<<]
+[2023-08-06 17:42:10,138: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:42:10,139: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:42:10,141: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:42:10,141: INFO: common: created directory at: artifacts]
+[2023-08-06 17:42:10,141: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-08-06 17:42:10,788: ERROR: stage_05_model_evaluation: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: '']
+Traceback (most recent call last):
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/pipeline/stage_05_model_evaluation.py", line 23, in <module>
+    obj.main()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/components/model_evaluation.py", line 43, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: ''
+[2023-08-06 17:43:30,393: INFO: stage_05_model_evaluation: >>>>>> stage Model evaluation stage started <<<<<<]
+[2023-08-06 17:43:30,396: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:43:30,397: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:43:30,399: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:43:30,399: INFO: common: created directory at: artifacts]
+[2023-08-06 17:43:30,399: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-08-06 17:43:30,955: ERROR: stage_05_model_evaluation: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: '']
+Traceback (most recent call last):
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/pipeline/stage_05_model_evaluation.py", line 23, in <module>
+    obj.main()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/components/model_evaluation.py", line 43, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: ''
+[2023-08-06 17:45:14,570: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-06 17:45:19,826: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:45:21,130: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:45:23,248: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:45:26,692: INFO: common: created directory at: artifacts]
+[2023-08-06 17:45:32,818: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 17:45:33,368: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2023-08-06 17:45:33,384: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:45:33,384: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-08-06 17:45:35,951: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:45:37,597: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:45:38,568: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:45:40,968: INFO: common: created directory at: artifacts]
+[2023-08-06 17:45:42,802: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 17:45:43,388: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:45:43,388: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-08-06 17:45:47,255: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:45:48,798: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:45:49,943: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:45:52,331: INFO: common: created directory at: artifacts]
+[2023-08-06 17:45:54,201: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-06 17:45:55,254: INFO: data_transformation: Splited data into training and test sets]
+[2023-08-06 17:45:55,254: INFO: data_transformation: (1199, 12)]
+[2023-08-06 17:45:55,254: INFO: data_transformation: (400, 12)]
+[2023-08-06 17:45:55,254: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:45:55,254: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-08-06 17:45:57,373: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:45:59,760: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:46:02,099: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:46:07,882: INFO: common: created directory at: artifacts]
+[2023-08-06 17:46:09,835: INFO: common: created directory at: artifacts/model_trainer]
+[2023-08-06 17:46:10,409: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:46:10,409: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2023-08-06 17:46:20,822: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:46:28,611: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:46:33,824: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:46:37,432: INFO: common: created directory at: artifacts]
+[2023-08-06 17:46:44,320: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-08-06 17:49:01,229: ERROR: main: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: '']
+Traceback (most recent call last):
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/main.py", line 65, in <module>
+    data_ingestion.main()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/components/model_evaluation.py", line 43, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: ''
+[2023-08-06 17:51:50,011: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-06 17:51:54,426: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:51:56,055: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:51:59,984: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:52:04,625: INFO: common: created directory at: artifacts]
+[2023-08-06 17:52:09,022: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 17:52:09,023: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2023-08-06 17:52:09,027: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:52:09,028: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-08-06 17:52:17,779: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:52:17,781: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:52:17,786: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:52:17,786: INFO: common: created directory at: artifacts]
+[2023-08-06 17:52:17,787: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 17:52:17,806: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:52:17,806: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-08-06 17:52:18,574: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:52:18,576: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:52:18,582: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:52:18,582: INFO: common: created directory at: artifacts]
+[2023-08-06 17:52:18,583: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-06 17:52:18,607: INFO: data_transformation: Splited data into training and test sets]
+[2023-08-06 17:52:18,607: INFO: data_transformation: (1199, 12)]
+[2023-08-06 17:52:18,607: INFO: data_transformation: (400, 12)]
+[2023-08-06 17:52:18,607: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:52:18,607: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-08-06 17:52:19,184: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:52:19,186: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:52:19,192: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:52:19,192: INFO: common: created directory at: artifacts]
+[2023-08-06 17:52:19,192: INFO: common: created directory at: artifacts/model_trainer]
+[2023-08-06 17:52:19,214: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:52:19,214: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2023-08-06 17:52:22,233: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:52:22,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:52:22,241: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:52:22,241: INFO: common: created directory at: artifacts]
+[2023-08-06 17:52:22,242: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-08-06 17:52:52,751: ERROR: main: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: '']
+Traceback (most recent call last):
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/main.py", line 65, in <module>
+    data_evaluation.main()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/components/model_evaluation.py", line 43, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: ''
+[2023-08-06 17:54:02,184: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-06 17:54:05,661: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:54:05,663: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:54:05,668: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:54:05,668: INFO: common: created directory at: artifacts]
+[2023-08-06 17:54:08,093: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 17:54:08,094: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2023-08-06 17:54:08,098: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:54:08,099: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-08-06 17:54:09,339: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:54:09,340: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:54:09,345: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:54:09,346: INFO: common: created directory at: artifacts]
+[2023-08-06 17:54:09,346: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 17:54:09,365: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:54:09,365: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-08-06 17:54:10,040: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:54:10,042: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:54:10,048: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:54:10,048: INFO: common: created directory at: artifacts]
+[2023-08-06 17:54:10,048: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-06 17:54:10,075: INFO: data_transformation: Splited data into training and test sets]
+[2023-08-06 17:54:10,075: INFO: data_transformation: (1199, 12)]
+[2023-08-06 17:54:10,075: INFO: data_transformation: (400, 12)]
+[2023-08-06 17:54:10,076: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:54:10,076: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-08-06 17:54:10,702: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:54:10,704: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:54:10,709: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:54:10,709: INFO: common: created directory at: artifacts]
+[2023-08-06 17:54:10,709: INFO: common: created directory at: artifacts/model_trainer]
+[2023-08-06 17:54:10,732: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:54:10,732: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2023-08-06 17:54:25,144: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:54:25,849: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:54:26,392: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:54:27,021: INFO: common: created directory at: artifacts]
+[2023-08-06 17:54:29,875: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-08-06 17:56:46,689: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2023-08-06 17:57:17,767: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:58:03,350: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-06 17:58:18,039: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:58:18,041: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:58:18,047: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:58:18,048: INFO: common: created directory at: artifacts]
+[2023-08-06 17:58:18,048: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 17:58:18,048: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2023-08-06 17:58:18,052: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:58:18,052: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-08-06 17:58:18,648: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:58:18,650: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:58:18,659: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:58:18,659: INFO: common: created directory at: artifacts]
+[2023-08-06 17:58:18,660: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 17:58:18,680: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:58:18,680: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-08-06 17:58:19,314: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:58:19,315: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:58:19,320: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:58:19,320: INFO: common: created directory at: artifacts]
+[2023-08-06 17:58:19,320: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-06 17:58:19,343: INFO: data_transformation: Splited data into training and test sets]
+[2023-08-06 17:58:19,344: INFO: data_transformation: (1199, 12)]
+[2023-08-06 17:58:19,344: INFO: data_transformation: (400, 12)]
+[2023-08-06 17:58:19,344: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:58:19,344: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-08-06 17:58:19,946: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:58:19,947: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:58:19,954: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:58:19,954: INFO: common: created directory at: artifacts]
+[2023-08-06 17:58:19,954: INFO: common: created directory at: artifacts/model_trainer]
+[2023-08-06 17:58:19,977: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-08-06 17:58:19,977: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2023-08-06 17:58:29,037: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 17:58:29,484: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 17:58:30,572: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 17:58:31,345: INFO: common: created directory at: artifacts]
+[2023-08-06 17:58:33,995: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-08-06 17:59:02,358: ERROR: main: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: '']
+Traceback (most recent call last):
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/main.py", line 65, in <module>
+    data_evaluation.main()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/gadeh/Documents/dl/KN/projects/mlflow-project-e2e/src/mlproject/components/model_evaluation.py", line 43, in log_into_mlflow
+    with mlflow.start_run():
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/fluent.py", line 350, in start_run
+    active_run_obj = client.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/client.py", line 275, in create_run
+    return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/tracking/_tracking_service/client.py", line 131, in create_run
+    return self.store.create_run(
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 175, in create_run
+    response_proto = self._call_endpoint(CreateRun, req_body)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/store/tracking/rest_store.py", line 56, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 281, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "/Users/gadeh/anaconda3/envs/common-venv-ml/lib/python3.10/site-packages/mlflow/utils/rest_utils.py", line 213, in verify_rest_response
+    raise MlflowException(
+mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/runs/create failed with error code 401 != 200. Response body: ''
+[2023-08-06 18:03:44,917: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-06 18:03:46,262: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 18:03:46,264: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 18:03:46,270: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 18:03:46,270: INFO: common: created directory at: artifacts]
+[2023-08-06 18:03:46,271: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 18:03:46,271: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2023-08-06 18:03:46,275: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-08-06 18:03:46,275: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-08-06 18:03:47,901: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 18:03:47,903: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 18:03:47,909: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 18:03:47,910: INFO: common: created directory at: artifacts]
+[2023-08-06 18:03:47,910: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 18:03:47,929: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 18:03:47,929: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-08-06 18:03:48,585: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 18:03:48,598: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 18:03:48,621: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 18:03:48,634: INFO: common: created directory at: artifacts]
+[2023-08-06 18:03:48,635: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-06 18:03:48,677: INFO: data_transformation: Splited data into training and test sets]
+[2023-08-06 18:03:48,677: INFO: data_transformation: (1199, 12)]
+[2023-08-06 18:03:48,677: INFO: data_transformation: (400, 12)]
+[2023-08-06 18:03:48,677: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-08-06 18:03:48,678: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2023-08-06 18:03:49,232: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 18:03:49,234: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 18:03:49,240: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 18:03:49,240: INFO: common: created directory at: artifacts]
+[2023-08-06 18:03:49,241: INFO: common: created directory at: artifacts/model_trainer]
+[2023-08-06 18:03:49,262: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2023-08-06 18:03:49,263: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2023-08-06 18:03:56,519: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-06 18:03:56,521: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 18:03:56,527: INFO: common: yaml file: schema.yaml loaded successfully]
+[2023-08-06 18:03:56,528: INFO: common: created directory at: artifacts]
+[2023-08-06 18:03:56,528: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-08-06 18:04:36,495: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2023-08-06 18:08:40,088: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]

@@ -33,9 +33,13 @@ class ModelEvaluation:
 
         test_x = test_data.drop([self.config.target_column], axis=1)
         test_y = test_data[[self.config.target_column]]
+        os.environ["MLFLOW_TRACKING_URI"]='https://dagshub.com/tiksharsh/mlflow-project.mlflow'
+        os.environ["MLFLOW_TRACKING_USERNAME"]='tiksharsh'
+        os.environ["MLFLOW_TRACKING_PASSWORD"]='0f27aa886d82f4cd2f16dc79464402ddf1de99b6'
 
-
-        mlflow.set_registry_uri(self.config.mlflow_uri)
+        remote_server_uri = 'https://dagshub.com/tiksharsh/mlflow-project.mlflow'
+        # mlflow.set_registry_uri(self.config.mlflow_uri)
+        mlflow.set_tracking_uri(self.config.mlflow_uri)
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
 
@@ -64,8 +68,8 @@ class ModelEvaluation:
                 # There are other ways to use the Model Registry, which depends on the use case,
                 # please refer to the doc for more information:
                 # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-                mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel", signature=signature)
+                mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
             else:
-                mlflow.sklearn.log_model(model, "model", signature=signature)
+                mlflow.sklearn.log_model(model, "model")
 
     
