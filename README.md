@@ -1,4 +1,4 @@
-# End-to-end-Machine-Learning-Project-with-MLflow
+# E2E-ML-Project-with-MLflow-&-DVC
 
 ## Workflows
 
@@ -11,6 +11,7 @@
 7. Update the pipeline
 8. Update the main.py
 9. Update the app.py
+10. Update the DVC
 
 # How to run?
 
@@ -61,9 +62,9 @@ open up you local host and port
 
 [dagshub](https://dagshub.com/)
 
-MLFLOW_TRACKING_URI=https://dagshub.com/tiksharsh/mlflow-project.mlflow \
-MLFLOW_TRACKING_USERNAME=tiksharsh \
-MLFLOW_TRACKING_PASSWORD=0f27aa886d82f4cd2f16dc79464402ddf1de99b6 \
+MLFLOW_TRACKING_URI=https://dagshub.com/tiksharsh/mlflow-project.mlflow
+MLFLOW_TRACKING_USERNAME=tiksharsh
+MLFLOW_TRACKING_PASSWORD=0f27aa886d82f4cd2f16dc79464402ddf1de99b6
 python script.py
 
 Run this to export as env variables:
@@ -74,7 +75,7 @@ export MLFLOW_TRACKING_URI=https://dagshub.com/tiksharsh/mlflow-project.mlflow
 
 export MLFLOW_TRACKING_USERNAME=tiksharsh 
 
-export MLFLOW_TRACKING_PASSWORD=0f27aa886d82f4cd2f16dc79464402ddf1de99b6
+export MLFLOW_TRACKING_PASSWORD=0f27aa886d82f4cd2f16dc79464402ddf1de99b
 
 ```
 
