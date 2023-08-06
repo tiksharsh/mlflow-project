@@ -9,6 +9,8 @@ import joblib
 from mlproject.entity.config_entity import ModelEvaluationConfig
 from mlproject.utils.common import save_json
 from pathlib import Path
+from mlflow.models import infer_signature
+
 
 
 class ModelEvaluation:
@@ -40,6 +42,7 @@ class ModelEvaluation:
         with mlflow.start_run():
 
             predicted_qualities = model.predict(test_x)
+            signature = infer_signature(predicted_qualities, test_x)
 
             (rmse, mae, r2) = self.eval_metrics(test_y, predicted_qualities)
             
@@ -61,8 +64,8 @@ class ModelEvaluation:
                 # There are other ways to use the Model Registry, which depends on the use case,
                 # please refer to the doc for more information:
                 # https://mlflow.org/docs/latest/model-registry.html#api-workflow
-                mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
+                mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel", signature=signature)
             else:
-                mlflow.sklearn.log_model(model, "model")
+                mlflow.sklearn.log_model(model, "model", signature=signature)
 
     

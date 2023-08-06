@@ -58,6 +58,6 @@ stages:
     #   - artifacts/model_evaluation/metrics.json
     metrics:
     - artifacts/model_evaluation/metrics.json:
-        cache: true
+        cache: false
 
   
