@@ -56,8 +56,9 @@ class ModelEvaluation:
             (rmse, mae, r2) = self.eval_metrics(test_y, predicted_qualities)
             
             # Saving metrics as local
-            scores = {"rmse": rmse, "mae": mae, "r2": r2, 'alpha': self.config.all_params.alpha, 'l1_ratio': self.config.all_params.l1_ratio, 'test score': test_score}
+            scores = {"rmse": rmse, "mae": mae, "r2": r2, 'alpha': self.config.all_params.alpha, 'l1_ratio': self.config.all_params.l1_ratio, 'validation_score': test_score}
             save_json(path=Path(self.config.metric_file_name), data=scores)
+            save_json(path=Path(self.config.evaluation_file_name), data=scores)
 
             mlflow.log_params(self.config.all_params)
 
@@ -66,6 +67,7 @@ class ModelEvaluation:
             mlflow.log_metric("mae", mae)
             mlflow.log_metric('alpha', self.config.all_params.alpha)
             mlflow.log_metric('l1_ratio', self.config.all_params.l1_ratio)
+            mlflow.log_metric("validation_score", test_score)
 
 
 

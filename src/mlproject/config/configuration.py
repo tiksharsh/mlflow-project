@@ -107,6 +107,7 @@ class ConfigurationManager:
             mlflow_uri="https://dagshub.com/tiksharsh/mlflow-project.mlflow",
             mlflow_username="tiksharsh",
             mlflow_pwd="0f27aa886d82f4cd2f16dc79464402ddf1de99b6",
+            evaluation_file_name = config.evaluation_file_name,
            
         )
 

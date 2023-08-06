@@ -52,3 +52,4 @@ class ModelEvaluationConfig:
     mlflow_uri: str
     mlflow_username: str
     mlflow_pwd: str
+    evaluation_file_name: str
